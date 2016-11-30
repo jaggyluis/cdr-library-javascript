@@ -1,4 +1,4 @@
-aviation.core.csv = {
+cdr.core.csv = {
 	parse : function (str) {
 		var parsed = str.split('\n'),
 			re = /[^\w\:\-]/gi,
