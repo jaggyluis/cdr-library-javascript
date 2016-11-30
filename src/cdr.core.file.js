@@ -15,11 +15,11 @@ cdr.core.file = {
 	        rawFile.send(null);
 	    }
 	    var reader = new FileReader();
-	    reader.onprogress = this.updateProgress;
-	    reader.onabort = this.abortUpload;
-	    reader.onerror = this.errorHandler;
+	    reader.onprogress = cdr.core.file.updateProgress;
+	    reader.onabort = cdr.core.file.abortUpload;
+	    reader.onerror = cdr.core.file.errorHandler;
 	    reader.onloadend = function (evt) {
-	        cb(this.onSuccess(evt));
+	        cb(cdr.core.file.onSuccess(evt));
 	    };
 	    readTextFile(file, function (data) {
 	        reader.readAsText(data);
